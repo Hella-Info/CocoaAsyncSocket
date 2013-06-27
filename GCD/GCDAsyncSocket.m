@@ -5855,7 +5855,7 @@ enum GCDAsyncSocketConfig
 	// 
 	// We'll know these conditions are met when both kStartingReadTLS and kStartingWriteTLS are set
 	
-	if ((flags & kStartingReadTLS) && (flags & kStartingWriteTLS))
+	if ((flags & kStartingReadTLS) && (flags & kStartingWriteTLS) && currentRead != nil)
 	{
 		BOOL canUseSecureTransport = YES;
 		
